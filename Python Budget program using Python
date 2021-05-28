@@ -1,0 +1,78 @@
+##### Budget App ######
+
+
+class Budget():
+    
+    def __init__(self,Food,Entertainment,Clothing):
+        
+        self.Food = Food
+        self.Entertainment = Entertainment
+        self.Clothing = Clothing
+        
+        print("This Program will calculate your Budget")
+        
+    def add_money(self,a,c):
+        
+        if c == 1:
+            
+            self.Food = self.Food + a 
+            
+        elif c == 2:
+            
+            self.Entertainment = self.Entertainment + a
+            
+            
+        elif c == 3:
+            
+            self.Clothing = self.Clothing + a
+            
+                
+        
+    def withdrawal(self,b,c):
+        
+        
+        
+        if c == 1:
+            
+            self.Food = self.Food - b 
+            
+        elif c == 2:
+            
+            self.Entertainment = self.Entertainment - b
+            
+            
+        elif c == 3:
+            
+            self.Clothing = self.Clothing - b
+            
+            
+            
+    def balance_check(self):
+        
+        print(f"The Balance in the Food,Entertainment and Clothing categories are :{self.Food},{self.Entertainment} and {self.Clothing} ")
+        
+            
+            
+k = Budget(0,0,0)
+
+k.add_money(100,1)
+
+k.balance_check()
+
+k.withdrawal(100,1)
+
+k.balance_check()
+
+
+
+            
+            
+            
+    
+            
+            
+
+        
+        
+        
+        
