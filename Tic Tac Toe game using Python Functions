@@ -1,0 +1,124 @@
+##### Tictoe game ______________-------------------
+
+
+
+def board_display(b):
+    
+    print(b[1]+"|" + b[2] + "|" + b[3] + "\n" + "-----------" + "\n" + b[4]+"|" + b[5] + "|" + b[6] + "\n" + "-----------" + "\n" + b[7]+"|" + b[8] + "|" + b[9] )
+  
+
+
+
+
+print(" ")
+
+def input1():
+    
+    select1 = int(input("player1, please select space : "))
+    
+    
+    for i in range(1,10):
+        
+        if i == select1:
+            b[i] = " "+player1+" "
+            
+            
+    
+    
+     
+
+
+def input2():
+    select2 = int(input("player2, please select space : "))
+    
+    
+    for i in range(1,10):
+        
+        if i == select2:
+            b[i] = " "+player2+" "
+            
+            
+            
+
+    
+def conditions(b):
+    
+    if (b[1] == b[2] == b[3] or b[4] == b[5] == b[6] or b[7] == b[8] == b[9] or b[1] == b[4] == b[7] or b[2] == b[5] == b[8] or b[3] == b[6] == b[9] or b[1] == b[5] == b[9] or b[3] == b[5] == b[7] ):
+        return True
+    
+    
+
+ ### main operation area ###### 
+
+
+print("Welcome to tictactoe game")
+
+
+b = ["#"," 1 "," 2 "," 3 "," 4 "," 5 "," 6 "," 7 "," 8 "," 9 "]
+            
+board_display(b)
+
+
+
+while True:
+    
+    player1 = input("player1: please enter X or O: ")
+
+    if ( player1 == "X" ) or ( player1 == "O" ):
+        
+        break
+        
+    
+    else:
+        print("thoda Dhyan rakho phir se instruction pado")
+        
+    
+    
+    
+while True:
+    player2 = input("player2: please enter X or O: ")
+    
+    
+    if ( player2 == "X" ) or ( player2 == "O" ):
+        
+        
+        break
+        
+    else:
+        print("thoda Dhyan rakho phir se instruction pado")
+
+
+
+while True:
+
+    input1()
+
+    board_display(b)
+    
+    h = conditions(b)
+    
+    if h == True:
+        print("Congratulations you won player1")
+        break
+    
+    
+    
+    
+
+    input2()
+
+    board_display(b)
+    
+    g = conditions(b)
+    
+    if g == True:
+        print("Congratulations you won player2")
+        break
+    
+    
+    
+    
+    
+    
+    
+    
